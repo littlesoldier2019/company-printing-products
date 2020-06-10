@@ -1,0 +1,27 @@
+@import './variable.scss';
+
+.navbar {
+    background-color: $light-backgrd;
+    &:hover {
+        background-color: white;
+    }
+    .navbar-toggler {
+        background-color: $orange;
+    }
+    .navbar-toggler-icon {
+        color : $orange;
+    }
+}
+
+.navbar-light .navbar-nav {
+    .nav-link {
+        margin: 0;
+        font-weight: 700;
+        &:hover {
+            cursor: pointer;
+            border-bottom : 1px solid $orange;
+            color: $orange;
+        }
+    }
+
+}

@@ -1,0 +1,54 @@
+@import './variable.scss';
+
+.footer {
+    p {
+        color: white;
+    }
+
+    .footer-info {
+        background-color: $grey;
+    }
+
+    .company-name {
+        color         : $orange;
+        text-transform: uppercase;
+    }
+
+    .footer-list {
+        span {
+            color       : $orange;
+            margin-right: 5px;
+        }
+    }
+
+    .footer-link {
+        cursor       : pointer;
+        border-bottom: $orange 1px solid;
+        width        : fit-content;
+
+        &:hover {
+            color: $orange;
+        }
+    }
+
+    .footer-trademark {
+        background-color: rgb(34, 32, 32);
+
+        p {
+            margin: 0;
+            color : $light-grey;
+        }
+
+        a {
+            color: grey;
+            &:hover {
+                color: $orange;
+            }
+        }
+
+        span {
+            color: $orange;
+        }
+    }
+
+}
