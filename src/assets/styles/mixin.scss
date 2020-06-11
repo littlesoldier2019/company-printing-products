@@ -1,0 +1,12 @@
+@import './variable.scss';
+
+@mixin transform($property) {
+    -webkit-transform: $property;
+    -ms-transform: $property;
+    transform: $property;
+  }
+
+
+  @mixin border-bottom {
+    border-bottom: $orange 1px solid;
+  }

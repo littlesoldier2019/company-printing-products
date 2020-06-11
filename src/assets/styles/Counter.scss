@@ -1,0 +1,12 @@
+@import './variable.scss';
+@import './mixin.scss';
+
+.counter_icon {
+    margin-bottom: 2rem;
+}
+
+.counter {
+    color: $orange;
+    font-size: 20px;
+    font-weight: 600;
+}

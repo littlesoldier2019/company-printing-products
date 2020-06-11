@@ -1,4 +1,7 @@
 
+@import './variable.scss';
+@import './mixin.scss';
+
 * {
     box-sizing: border-box;
 }
@@ -44,13 +47,12 @@ h3,
 h4,
 h5,
 h6 {
-    font-weight: 700;
-    color: #252628;
     margin: 0px;
 }
 
 h1 {
-    font-size: 72px;
+    font-size: 60px;
+    color: $orange;
     
 }
 
@@ -61,16 +63,15 @@ h2 {
 
 h3 {
     font-size: 36px;
-    letter-spacing: 3px;
+    text-transform: uppercase;
     line-height: 1.5;
     
 }
 
 h4 {
-    font-size: 16px;
-    text-transform: uppercase;
-    color: #003149;
-    font-weight: 500;
+    font-size: 20px;
+    color: $grey;
+    font-weight: 600;
 }
 
 h5 {

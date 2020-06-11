@@ -1,4 +1,5 @@
 @import './variable.scss';
+@import './mixin.scss';
 
 .footer {
     p {
@@ -22,9 +23,9 @@
     }
 
     .footer-link {
-        cursor       : pointer;
-        border-bottom: $orange 1px solid;
-        width        : fit-content;
+        cursor: pointer;
+        width : fit-content;
+        @include border-bottom;
 
         &:hover {
             color: $orange;
@@ -41,6 +42,7 @@
 
         a {
             color: grey;
+
             &:hover {
                 color: $orange;
             }

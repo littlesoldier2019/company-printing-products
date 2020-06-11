@@ -41,7 +41,7 @@ function Footer() {
                             </li>
                         </ul>
                     </div>
-                    <div class="col-sm-12 col-md-4 col-lg-3">
+                    <div className="col-sm-12 col-md-4 col-lg-3">
                         <ul className="footer-sitemap">
                             <li className="footer-item mx-sm-1 mx-md-3 mx-lg-5">
                                 <p className="footer-link">Trang chủ</p>
