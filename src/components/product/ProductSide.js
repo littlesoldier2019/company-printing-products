@@ -20,10 +20,10 @@ function ProductSide() {
                 )
             });
             return (
-                <AccordionItem>
+                <AccordionItem key={index}>
                     <AccordionItemHeading>
                         <AccordionItemButton>
-                            <div className="col-sm-12 ml-auto" key={index}>
+                            <div className="col-sm-12 ml-auto">
                                 <h4 className=' my-3 p-1'>{item.title}</h4>
                             </div>
                         </AccordionItemButton>

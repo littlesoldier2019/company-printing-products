@@ -5,12 +5,12 @@ import Logo from '../../assets/images/Logo.png';
 function Footer() {
     return (
         <div className="footer">
-            <div className="footer-info py-sm-2 py-md-3 py-lg-5">
-                <div className="container py-sm-2 py-md-3 py-lg-5">
+            <div className="footer-info py-5">
+                <div className="container">
                     <div className="row">
                         <div className="col-sm-12 col-md-12 col-lg-4">
                             <div className="row">
-                                <div className="col-sm-12 col-md-4 col-lg-12 mb-2 mb-md-3 mb-lg-5">
+                                <div className="col-sm-12 col-md-4 col-lg-12 my-2 my-md-3 my-lg-5">
                                     <img className="navbar-brand" src={Logo} alt="logo Tân Á Châu"/>
                                 </div>
                                 <div className="col-sm-12 col-md-8 col-lg-12">

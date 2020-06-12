@@ -33,7 +33,6 @@ import Image32 from '../assets/images/product32.jpg';
 import Image33 from '../assets/images/product33.jpg';
 import Image34 from '../assets/images/product34.jpg';
 import Image35 from '../assets/images/product35.jpg';
-import Image36 from '../assets/images/product36.jpg';
 
 const productdata = [
     Image1,
@@ -70,8 +69,7 @@ const productdata = [
     Image32,
     Image33,
     Image34,
-    Image35,
-    Image36,
+    Image35
 ];
 
 export default productdata;

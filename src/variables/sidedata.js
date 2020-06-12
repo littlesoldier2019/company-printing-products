@@ -26,6 +26,23 @@ const servicedata = [
         ]
     },
     {
+        title: "Màu sắc",
+        list: [
+            "Trắng",
+            "Đen",
+            "Xám",
+            "Đỏ",
+            "Cam",
+            "Xanh lá cây",
+            "Xanh lá mạ",
+            "Xanh dương",
+            "Tím",
+            "Hồng",
+            "Vàng",
+            "Màu khác"
+        ]
+    },
+    {
         title: "Thiết kế",
         list: [
             "Namecard, Danh thiếp",
@@ -62,23 +79,6 @@ const servicedata = [
             "Hộp bánh trung thu",
             "Giỏ bánh trung thu",
             "Sổ tay"
-        ]
-    },
-    {
-        title: "Màu sắc",
-        list: [
-            "Trắng",
-            "Đen",
-            "Xám",
-            "Đỏ",
-            "Cam",
-            "Xanh lá cây",
-            "Xanh lá mạ",
-            "Xanh dương",
-            "Tím",
-            "Hồng",
-            "Vàng",
-            "Màu khác"
         ]
     }
 ]

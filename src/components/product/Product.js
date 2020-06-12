@@ -5,7 +5,7 @@ import ProductSide from './ProductSide';
 
 function Product() {
     return (
-        <div>
+        <>
             <SubHero />
             <div className="container-fluid">
                 <div className="row p-0 p-md-3 p-lg-5">
@@ -17,7 +17,7 @@ function Product() {
                     </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 }
 
