@@ -1,0 +1,42 @@
+
+@import './variable.scss';
+@import './mixin.scss';
+
+.product-side {
+
+    text-align: left;
+
+    .accordion__button {
+        position: relative;
+        &::before {
+            position: absolute;
+            right: 1rem;
+            top: 4px;
+            content: '';
+            background-image: url('../images/icons-down.png');
+            background-repeat: no-repeat;
+            -webkit-transition: all 0.3s linear;
+            transition: all 0.3s linear;
+            height: 24px;
+            width: 24px;
+          }
+        &[aria-expanded="true"]::before {
+            background-image: url('../images/icons-up.png');
+            transform: rotate(0deg);
+            height: 24px;
+            width: 24px;
+            content: '';
+        }
+    }
+}
+
+.side-list {
+    li {
+        width: max-content;
+    }
+    .side-item {
+        margin: auto;
+        padding: 5px 10px;
+    }
+}
+

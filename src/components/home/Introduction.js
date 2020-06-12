@@ -12,19 +12,19 @@ function Introduction() {
             </div>
             <div className="row">
                 <div className="col-sm-12 col-md-6 col-lg-3">
-                    <img src={Icon1} class="img-fluid" alt="in nhanh Tân Á Châu" />
+                    <img src={Icon1} className="img-fluid" alt="in nhanh Tân Á Châu" />
                     <p className="text-center">In trên mọi chất liệu. Luôn cập nhật những mẫu giấy cao cấp nhất.</p>
                 </div>
                 <div className="col-sm-12 col-md-6 col-lg-3">
-                    <img src={Icon2} class="img-fluid" alt="in nhanh Tân Á Châu" />
+                    <img src={Icon2} className="img-fluid" alt="in nhanh Tân Á Châu" />
                     <p className="text-center">Công nghệ in tiên tiến đạt chuẩn FSC và tiêu chuẩn xuất khẩu</p>
                 </div>
                 <div className="col-sm-12 col-md-6 col-lg-3">
-                    <img src={Icon3} class="img-fluid" alt="in nhanh Tân Á Châu" />
+                    <img src={Icon3} className="img-fluid" alt="in nhanh Tân Á Châu" />
                     <p className="text-center">Màu sắc chuẩn xác theo thiết kế được các thương hiệu lớn tin dùng.</p>
                 </div>
                 <div className="col-sm-12 col-md-6 col-lg-3">
-                    <img src={Icon4} class="img-fluid" alt="in nhanh Tân Á Châu" />
+                    <img src={Icon4} className="img-fluid" alt="in nhanh Tân Á Châu" />
                     <p className="text-center">Kỹ thuật gia công cấn bế ép kim trình độ cao theo yêu cầu</p>
                 </div>
             </div>

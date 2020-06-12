@@ -16,15 +16,15 @@
     }
 
     .footer-list {
-        span {
-            color       : $orange;
-            margin-right: 5px;
+        img {
+            margin: 5px ;
         }
     }
 
     .footer-link {
         cursor: pointer;
         width : fit-content;
+        text-transform: uppercase;
         @include border-bottom;
 
         &:hover {

@@ -40,7 +40,7 @@ const star = (
 const content = data.map((item, index) => {
     if (index === 0) {
         return (
-            <div className="carousel-item active" data-interval="10000">
+            <div className="carousel-item active" data-interval="10000" key={index}>
                 <div className="row">
                     <div className="col-12 col-md-10 col-lg-7 mx-auto">
                         <p className="d-block w-100 text-center">{item.copy}</p>
@@ -51,7 +51,7 @@ const content = data.map((item, index) => {
         )
     } else {
     return (
-        <div className="carousel-item" data-interval="10000">
+        <div className="carousel-item" data-interval="10000" key={index}>
             <div className="row">
                 <div className="col-12 col-md-10 col-lg-7 mx-auto">
                     <p className="d-block w-100 text-center">{item.copy}</p>
