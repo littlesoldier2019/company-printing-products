@@ -1,5 +1,6 @@
 import React from 'react';
 import Line from '../share-compoments/Line';
+import Button from '../share-compoments/Button';
 
 function ContactForm() {
     return (
@@ -14,8 +15,8 @@ function ContactForm() {
                                         Liên hệ
 									</h3>
                                     <Line />
-                                    <p>
-                                        Công ty TNHH In ấn - Thiết kế - Quảng cáo Tân Á Châu
+                                    <p className='text-center'>
+                                        Công ty TNHH In ấn - Thiết kế - Quảng cáo Tân Á Châu.
 									</p>
                                 </div>
                             </div>
@@ -45,7 +46,7 @@ function ContactForm() {
                                 <label htmlFor="message">Nội dung</label>
                                 <textarea className="form-control" id="message" rows="8"></textarea>
                             </div>
-                            <button type="submit" className="btn btn-outline-warning px-5 mt-lg-5 rounded-pill">Gởi</button>
+                            <Button text="gởi"/>
                         </form>
                     </div>
                 </div>

@@ -1,6 +1,8 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import Line from '../share-compoments/Line';
 import servicedata from '../../variables/servicedata';
+import Button from '../share-compoments/Button';
 
 function Services() {
 
@@ -36,6 +38,9 @@ function Services() {
                 </div>
                 <div className="row">
                     {content}
+                </div>
+                <div className="text-center">
+                    <Link to="/product"><Button text="danh mục sản phẩm" /></Link>
                 </div>
             </div>
         </div>

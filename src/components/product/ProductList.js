@@ -4,7 +4,7 @@ import '../../assets/styles/ProductList.scss';
 
 function ProductList() {
     const content = productdata.map((item, index) => {
-        if (index % 5 === 4 && index != 0) {
+        if (index % 5 === 4 && index !== 0) {
             return (<div className="col-12 col-lg-8 p-0 m-0 d-flex justify-content-center align-items-center" key={index} >
                 <img className="product-image" src={item} alt="In hộp giấy Tan A Chau" />
             </div>)

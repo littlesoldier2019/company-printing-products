@@ -1,0 +1,14 @@
+.subhero-container {
+    position: relative;
+
+    .btn-container {
+        position: absolute;
+        top     : 50%;
+        right   : 15%;
+    }
+    .title {
+        font-size: 40px;
+        margin: 0;
+        font-weight: bold;
+    }
+}
