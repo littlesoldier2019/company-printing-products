@@ -13,7 +13,7 @@ function Header() {
             <div className="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul className="navbar-nav m-auto">
                     <NavLink to="/" className="nav-item mx-sm-1 mx-md-3 mx-lg-5">
-                        <p className="nav-link text-uppercase">Trang chủ <span className="sr-only">(current)</span></p>
+                        <p className="nav-link text-uppercase">Trang chủ</p>
                     </NavLink>
                     <NavLink to="/product" className="nav-item mx-sm-1 mx-md-3 mx-lg-5">
                         <p className="nav-link text-uppercase">Sản phẩm</p>
