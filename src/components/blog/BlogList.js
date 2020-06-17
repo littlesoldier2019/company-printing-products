@@ -1,34 +1,40 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import '../../assets/styles/BlogList.scss';
-import blogData from '../../variables/blogdata';
+import { BlogContext } from '../../context/blogcontext';
 
 function BlogList() {
     let content;
+    const { blog, error } = useContext(BlogContext);
     const Item = ({ data }) => {
         return (
             <div className="item-container">
                 <div className="item-img d-flex flex-column">
-                    <img src={data.image}  alt="in nhanh Tan A Chau" />
-                    <p className="item-category align-self-center">{data.category}</p>
+                    <img src={data.fields.cover.fields.file.url} alt="in nhanh Tan A Chau" />
+                    <p className="item-category align-self-center">{data.fields.category}</p>
                 </div>
-                <h5 className="item-title text-center px-0 px-md-3 px-lg-5">{data.title}</h5>
+                <h5 className="item-title text-center px-0 px-md-3 px-lg-5">{data.fields.title}</h5>
             </div>
         )
     }
-    if (!blogData) {
-        return (content = (<div></div>))
+    if (blog.length === 0 || !blog || error) {
+        return (content = (<div><p>Oops...something went wrong! Please refresh the page</p></div>))
     } else {
-        content = blogData.map((item, index) => {
+        content = blog.map((item, index) => {
             if (index < 2) {
                 return (
                     <div className="col-12 col-lg-6 my-0 my-md-3 my-lg-5" key={index}>
-                        <Item data={item} />
+                        <Link to={`/blog/${item.sys.id}`}>
+                            <Item data={item} />
+                        </Link>
                     </div>
                 )
             } else {
                 return (
                     <div className="col-12 col-md-6 col-lg-4 my-0 my-md-3 my-lg-5" key={index} >
-                        <Item data={item} />
+                        <Link to={`/blog/${item.sys.id}`}>
+                            <Item data={item} />
+                        </Link>
                     </div>
                 )
             }

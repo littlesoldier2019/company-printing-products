@@ -1,21 +1,15 @@
 @import './variable.scss';
 @import './mixin.scss';
 
-.bloglist {
-    .item-img {
+.blog-details {
+    .blog-img {
         max-width: 100%;
     }
-    .item-category {
+    .blog-category {
         background-color: $orange-backgrd-dark;
         width: max-content;
-        margin-top: -13px;
         padding: 3px 10px;
         color: whitesmoke;
         text-transform: uppercase;
-    }
-    a,
-    &:hover,
-    &:active {
-        color: #212529;
     }
 }
