@@ -26,9 +26,7 @@ function ContactForm() {
                                                 Liên hệ
 									        </h3>
                                             <Line />
-                                            <p className='text-center'>
-                                                Công ty TNHH In ấn - Thiết kế - Quảng cáo Tân Á Châu.
-									        </p>
+                                            <p className='text-center'>{data.name}</p>
                                         </div>
                                     </div>
                                 </div>

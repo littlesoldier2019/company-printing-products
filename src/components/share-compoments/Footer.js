@@ -26,7 +26,7 @@ function Footer() {
                                     </div>
                                 </Link>
                                 <div className="col-sm-12 col-md-8 col-lg-12">
-                                    <p>Công ty TNHH In ấn - Thiết kế - Quảng cáo Tân Á Châu chuyên cung cấp các giải pháp thiết kế, in ấn uy tín cho doanh nghiệp. Sản phẩm Tân Á Châu được chứng nhận tiêu chuẩn FSC quốc tế, chuyên các sản phẩm in ấn bao bì cho các doanh nghiệp trong và ngoài nước.</p>
+                                    <p>{data.name} chuyên cung cấp các giải pháp thiết kế, in ấn uy tín cho doanh nghiệp. Sản phẩm Tân Á Châu được chứng nhận tiêu chuẩn FSC quốc tế, chuyên các sản phẩm in ấn bao bì cho các doanh nghiệp trong và ngoài nước.</p>
                                 </div>
                             </div>
                         </div>
