@@ -7,13 +7,13 @@ function Hero() {
     return (
         <div id="ccarouselExampleSlidesOnly" className="carousel slide hero" data-ride="carousel">
             <div className="carousel-inner">
-                <div className="carousel-item active" data-interval="5000">
+                <div className="carousel-item active" data-interval="1000">
                     <img src={Image1} className="d-block w-100" alt="in nhanh Tan A Chau" />
                 </div>
-                <div className="carousel-item" data-interval="5000">
+                <div className="carousel-item" data-interval="1000">
                     <img src={Image2} className="d-block w-100" alt="in nhanh Tan A Chau" />
                 </div>
-                <div className="carousel-item" data-interval="5000">
+                <div className="carousel-item" data-interval="1000">
                     <img src={Image3} className="d-block w-100" alt="in nhanh Tan A Chau" />
                 </div>
             </div>

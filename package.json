@@ -2,7 +2,7 @@
   "name": "company-printing-products",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://phamhiep.com",
+  "homepage": "http://tanachau.vn",
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^13.4.0",
     "@testing-library/jest-dom": "^4.2.4",
