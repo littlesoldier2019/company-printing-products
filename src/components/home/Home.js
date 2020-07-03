@@ -8,6 +8,7 @@ import Testimonial from './Testimonial';
 import Client from './Client';
 
 function Home() {
+    console.log("home",process.env)
     return (
         <>
             <Hero />

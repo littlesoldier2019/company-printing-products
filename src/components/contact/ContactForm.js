@@ -1,17 +1,53 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
+import { useForm } from 'react-hook-form';
+import emailjs from 'emailjs-com';
 import Line from '../share-compoments/Line';
 import Button from '../share-compoments/Button';
 import { ContactContext } from '../../context/contactcontext';
+import '../../assets/styles/ContactForm.scss';
 
 function ContactForm() {
     let message;
     let data;
+    const { register, handleSubmit, errors } = useForm();
     const { contact, error } = useContext(ContactContext);
+    const [result, setResult] = useState(null);
+
     if (contact.length === 0 || !contact || error) {
         return (message = (<div><p>Oops...something went wrong! Please refresh the page</p></div>))
     } else {
         data = contact[0].fields;
     }
+
+    const sendEmail = (templateParams) => {
+        emailjs.send(
+            'gmail', 
+            process.env.REACT_APP_EMAIL_TEMPLATE_ID,
+            templateParams, 
+            process.env.REACT_APP_EMAIL_USER_ID
+        ).then(res => {
+            // Email successfully sent alert
+            setResult('Chúng tôi đã nhận được tin nhắn và sẽ phản hồi sớm nhất!')
+        })
+            // Email Failed to send Error alert
+            .catch(err => {
+                setResult('Chưa gởi được. Xin vui lòng thử lại!')
+                console.error('Email Error:', err)
+            })
+    }
+    const onSubmit = (input) => {
+        console.log(input);
+        sendEmail(
+            {
+                "email": input.email,
+                "name": input.name,
+                "company": input.company,
+                "phone": input.phone,
+                "content": input.content
+            }
+        );
+    };
+
     return (
         <>
             {message ? { message } : (
@@ -30,32 +66,86 @@ function ContactForm() {
                                         </div>
                                     </div>
                                 </div>
-                                <form>
+                                <form onSubmit={handleSubmit(onSubmit)}>
                                     <div className="form-row">
                                         <div className="form-group col-md-6">
                                             <label htmlFor="name">Họ và tên</label>
-                                            <input type="text" className="form-control" id="name" />
+                                            <input
+                                                type="text"
+                                                className="form-control"
+                                                id="name"
+                                                name="name"
+                                                ref={register({
+                                                    required: "Bắt buộc",
+                                                    maxLength: { value: 100, message: "Tối đa 100 ký tự" },
+                                                    minLength: { value: 3, message: "Tối thiểu 3 ký tự" }
+                                                })}
+                                            />
+                                            {errors.name && <p className='error-message'>{errors.name.message}</p>}
                                         </div>
                                         <div className="form-group col-md-6">
-                                            <label htmlFor="position">Chức vụ</label>
-                                            <input type="text" className="form-control" id="position" />
+                                            <label htmlFor="position">Công ty</label>
+                                            <input
+                                                type="text"
+                                                className="form-control"
+                                                id="company"
+                                                name="company"
+                                                ref={register({
+                                                    required: "Bắt buộc",
+                                                    maxLength: { value: 100, message: "Tối đa 100 ký tự" },
+                                                    minLength: { value: 3, message: "Tối thiểu 3 ký tự" }
+                                                })}
+                                            />
+                                            {errors.company && <p className='error-message'>{errors.company.message}</p>}
                                         </div>
                                     </div>
                                     <div className="form-row">
                                         <div className="form-group col-md-6">
                                             <label htmlFor="email">Email</label>
-                                            <input type="email" className="form-control" id="email" />
+                                            <input
+                                                type="email"
+                                                className="form-control"
+                                                id="email"
+                                                name="email"
+                                                ref={register({
+                                                    required: "Bắt buộc",
+                                                    pattern: {
+                                                        value: /^(([^<>()\\.,;:\s@"]+(\.[^<>()\]\\.,;:\s@"]+)*)|(".+"))@(([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                                                        message: "Điền email hợp lệ"
+                                                    }
+                                                })}
+                                            />
+                                            {errors.email && <p className="error-message">{errors.email.message}</p>}
                                         </div>
                                         <div className="form-group col-md-6">
                                             <label htmlFor="phone">Điện thoại</label>
-                                            <input type="text" className="form-control" id="phone" />
+                                            <input
+                                                type="text"
+                                                className="form-control"
+                                                id="phone"
+                                                name="phone"
+                                                ref={register({
+                                                    required: "Bắt buộc",
+                                                    maxLength: { value: 20, message: "Tối đa 20 ký tự" },
+                                                    minLength: { value: 6, message: "Tối thiểu 6 ký tự" }
+                                                })}
+                                            />
+                                            {errors.phone && <p className="error-message">{errors.phone.message}</p>}
                                         </div>
                                     </div>
                                     <div className="form-group">
                                         <label htmlFor="message">Nội dung</label>
-                                        <textarea className="form-control" id="message" rows="8"></textarea>
+                                        <textarea
+                                            className="form-control"
+                                            id="content"
+                                            name="content"
+                                            rows="8"
+                                            ref={register({ required: "Bắt buộc", max: 8, min: 1, maxLength: 8 })}
+                                        />
+                                        {errors.content && <p className="error-message">{errors.content.message}</p>}
                                     </div>
-                                    <Button text="gởi" />
+                                    {result && <p className="result-message">{result}</p>}
+                                    <Button text="gởi" onClick={handleSubmit} />
                                 </form>
                             </div>
                         </div>
